@@ -1,0 +1,12 @@
+1. git config --global user.name xiaoming
+
+2. git config --global user.email 1234567@qq.com
+
+3  git init 初始化git仓库   会多出一个隐藏文件夹.git
+
+ 工作区 可以看到的   缓冲区    仓库
+
+4.git add index.html  把文件推送到缓存区
+
+5. git commit -m  “提示”  作为此版本的提示信息、并提交到仓库里面去 
+
