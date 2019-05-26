@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    /* 头部 */
+    .header{
+        width: 100%;
+        height: 50px;
+        background: #000;
+    }
+    .header_main{
+        width: 960px;
+        height: 50px;
+      
+        margin: 0 auto;
+    }
+    .header_main .hedaer_logo{
+        width: 80px;
+        height: 50px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 40px;
+        color: #fff;
+        float: left;
+        cursor:pointer;
+    }
+    .header_main .hedaer_logo:hover{
+        color: aqua;
+        background: #fff;
+    }
+    .header_main .header_nav{
+        float:right;
+        width: 300px;
+        height: 50px; 
+    }
+    .header_main .header_nav li{
+           width: 100px;
+            height: 40px;
+            text-align: center;
+            line-height: 30px;
+         
+            float: left;
+            color: #fff;
+            cursor:pointer;
+    }
+    .header_main .header_nav li:hover{
+        color: aqua;
+        background: #fff;
+        font-weight: 700;
+    }
+    .banner{
+        position: relative;
+        width: 100%;
+        height: 240px;
+        background: aquamarine;
+    }
+    .banner .banner_nav{
+        position: absolute;
+        bottom: 20px;
+        right: 100px;
+        width: 215px;
+        height: 30px;
+        /* border: 1px solid #ccc; */
+    }
+    .banner .banner_nav li{
+        float: left;
+        width: 50px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        cursor:pointer;
+    }
+    .banner .banner_nav li:nth-of-type(2){
+        margin: 0 5px;
+    }
+    .banner .banner_nav li:nth-of-type(3){
+        margin-right: 5px;
+        background: #f40;
+    }
+.nav{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ccc;
+    /* background: #eee; */
+}
+.nav .wrapper_nav{
+    position: relative;
+    width: 960px;
+    height: 50px;
+    margin: 0 auto;
+    /* background: pink; */
+}
+.nav .wrapper_nav ul{
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    /* float: left; */
+    width: 300px;
+    /* border: 1px solid blue; */
+    overflow: hidden;
+
+}
+.nav .wrapper_nav li{
+    float: left;
+    line-height: 40px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+     background: #eee;
+     cursor:pointer;
+}
+.nav .wrapper_nav li:nth-of-type(1){
+    background: #fff;
+    border-bottom: transparent;
+
+}
+.content{
+    width: 960px;
+    height: 900px;
+    /* border: 1px solid #ccc; */
+    margin: 10px auto 0;
+  
+}
+.content section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.content div{
+    margin: 5px;
+    border: 1px solid #ccc;
+    padding: 80px;
+    text-align: center;
+}
+.content div:nth-of-type(1){
+            flex: 1;
+        }
+        .content div:nth-of-type(2){
+            flex: 1;
+        }
+        .content div:nth-of-type(3){
+            flex: 1;
+        }
+
+.footer{
+    margin-top: 15px;
+    width: 100%;
+    height: 80px;
+    background: cadetblue;
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="header_main">
+            <div class="hedaer_logo">Logo</div>
+            <div class="header_nav">
+                <ul>
+                    <li>gubhit</li>
+                    <li>username</li>
+                    <li>longsug</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="banner_nav">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="wrapper_nav">
+                <ul>
+                    <li>home</li>
+                    <li>nav</li>
+                    <li>about</li>
+                </ul>
+        </div>
+    </div>
+    <div class="content">
+            <section>
+                    <div>This is Cotent 1</div>
+                    <div>Maybe Cotent 2</div>
+                    <div>Cotent 3</div>
+                </section>
+                <section>
+                    <div>Cotent 4</div>
+                    <div>Cotent 5</div>
+                    <div>Cotent 6</div>
+                    <div>Cotent 7</div>
+                </section>
+            <section>
+                    <div>Cotent 8</div>
+                    <div>Cotent 9</div>
+                    <div>Cotent 10</div>
+                </section>
+    </div>
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>
