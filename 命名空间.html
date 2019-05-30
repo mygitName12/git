@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 命名空间   变量都写在自己名字的里面
+        var org = {
+            department1 :{
+                hongkong :{
+                    name : 123,
+                    age :12
+                },
+                xiaoming :{
+
+                }
+            }
+        }
+        var name = 'abc';
+        var init = (function (){
+            var name = 'abc';
+
+            function callName(){
+                console.log(name)
+            }
+
+            return function (){
+                callName();
+            }
+        }());
+        // init();
+        //   init  是js执行的入口   用立即执行函数 可以防止变量冲突
+        var initDeng = (function (){
+            var name = 123;
+            function callName() {
+                console.log(name);
+            }
+            return function (){
+                callName();
+            }
+        }());
+
+
+        var deng = {
+            somke : function(){
+                console.log('haohahah');
+                return this;
+            },
+            drink : function (){
+                console.log('hhhh')
+                return this;
+            },
+            perm : function(){
+                console.log('hahhaha');
+                return this;
+            }
+        }
+        deng.somke().drink().perm();    //  实现jq中的点链式调用
+
+
+        //  属性的调用拼接   
+        var  obj = {
+            wife1 : {name : '小刘'},
+            wife2 : {name : '小张'},
+            wife3 : {name : '小李'},
+            saywife : function(num){
+                return this['wife' + num];
+            }
+        }
+
+        //  obj.wife1    obj['wife' + num]
+        for(var prop in obj){
+            console.log(obj[prop]);
+            //  枚举循环中使用这种形式
+        }
+
+        // 遍历对象  用for in 循环
+        
+    </script>
+</body>
+</html>
