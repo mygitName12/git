@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: aqua;
+            width: 120px;
+            height: 20px;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div onmouseover="mover(this)" onmouseout="mout(this)">嘿嘿</div>
+    <script>
+        // onload  onunload  当用户进入后 及离开页面时  会触发onload  和 onunload 事件
+        //onload 事件可用与检测访问者的浏览器类型和浏览器版本 ，然后基于改信息加载野蛮的恰当版本
+        // 他们两个可以用来处理cookie 
+
+        //  onchange 事件经常与输入字段验证结合使用 
+
+        // onmouseover 和 onmouseout  事件 可以当用户将鼠标移至html元素上或者移出某个函数
+        function mover(obj){
+            obj.innerHTML = '哈哈哈'
+        }
+        function mout(obj){
+            obj.innerHTML = '嘻嘻'
+        }
+
+    </script>
+</body>
+</html>
