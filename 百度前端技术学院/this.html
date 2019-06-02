@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // 预编译过程中   this指向window;
+       
+        // 立即执行函数   
+        var num = (function (n){
+            if(n == 1){
+                return 1;
+            }
+            return n * arguments.callee(n -1);
+        }(100));
+
+        // arguments 中的方法
+        //  arguments.callee  指向函数自身引用
+        //  func.caller   
+    //    function test(){
+    //        console.log(arguments.callee)
+    //        demo();
+    //    }
+    //    function demo(){
+    //         demo.caller;
+    //    }
+    </script>
+</body>
+</html>

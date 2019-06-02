@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .chang{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <Button onclick="alert(1)">点击</Button>
+        <input onclick="alert(1)" />
+    <div class="dv">
+
+    </div>
+    <script>
+
+        function addClass(ele, value){
+            if(!ele.className){
+                ele.className = value;
+            }else{
+                newcalss = ele.className;
+                newcalss += ' ';
+                newcalss += value;
+                ele.className = newcalss;
+            }
+        }
+        var setName = document.getElementsByTagName("div")[0];
+        addClass(setName, 'chang')
+        // function setClassName(){
+        //     var setName = document.getElementsByTagName("div")[0];
+        //     setName.className = "chang"
+        // }
+        // setClassName();
+    </script>
+</body>
+</html>
