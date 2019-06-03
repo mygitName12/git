@@ -1,0 +1,150 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    background: #eee;
+}
+
+.main-left {
+    position: relative;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    min-height: 100%;
+}
+
+.main-right {
+    padding: 10px;
+    min-height: 100%;
+}
+
+video { 
+    width: 100%;
+    height: auto;
+}
+.auto{
+    width: 100%;
+    min-height: 75%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+div#subscriber {
+    /*background: url(__PUBLIC__/static/imgs/1.png) no-repeat;*/
+    /*background-size: cover;*/
+    position: absolute;
+    right: 0;
+    min-height: 100%;
+    width: 75%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 10px;
+    border:1px solid #ccc;
+}
+
+/* 3 、4 */
+/* .video_3_4{
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.video_5_6_7_8_9{
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: center;
+} */
+#subscriber video {
+    /* margin-top: 5px; */
+}
+/* 1、2*/
+
+/* .video_1_2{
+    align-items: center;
+    justify-content: center;
+} */
+
+
+.video1 {
+    /* flex: 1; */
+    box-sizing: border-box;
+    margin: 5px 0;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/*2*/
+.video2 {
+  
+   box-sizing: border-box;
+    width: 49%;
+    height: 60%;
+    object-fit: fill;
+    margin-left: 5px;
+}
+/*3、4  2x2*/
+.video3 {
+    margin-left: 5px;
+    width: 49%;
+    object-fit: cover;
+}
+
+/*5,6*/
+.video4 {
+    box-sizing: border-box;
+    margin-left: 10px;
+    width: 32%;
+    height: 40%;
+    object-fit: fill;
+   
+}
+
+/*7,8、9   3x3 */
+.video5 {
+    box-sizing: border-box;
+    margin-left: 7px;
+    width: 32%;
+}
+
+/* 10-16  4x4*/
+.video6 {
+    box-sizing: border-box;
+    margin-left: 5px;
+    width: 24%;
+}
+
+/* 17-25   5x5 */
+.video7 {
+    margin-right: 10px;
+    width: 19%;
+}
+/* 25-36  6x6 */
+.video8 {
+    margin-left: 5px;
+    width: 16%;
+}
+.video9{
+    margin-right:10px;
+    width:12%;
+}
+
+.my-video {
+    height: 33%;
+    width: 50%;
+    min-width: 50%;
+}
+
+.ztree * {
+    font-size: 16px;
+}
+
+.video-container {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+}
