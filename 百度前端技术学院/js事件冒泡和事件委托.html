@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!-- <div id="parent" style="background-color: #000; height: 400px; width: 400px" data-id="444">
+		<div id="child" style="background-color: #fff; height: 200px; width: 200px" data-id="555"></div>
+	</div> -->
+	<ul id="parentUl">
+		<li>我还是个孩子</li>
+		<li>我还是个孩子</li>
+		<li>我还是个孩子</li>
+		<li>我还是个孩子</li>
+		<li>我还是个孩子</li>
+		<li>我还是个孩子</li>
+	</ul>
+ <script type="text/javascript">
+ 	//  事件冒泡 在DOM2的基础上， 如果点击的子元素节点 ， 则会以子元素为事件原 开始逐级向上传播 ，来触发父元素；
+ 	// document.getElementById('parent').onclick = function(){
+ 	// 	console.log(this.getAttribute('data-id'));
+ 	// };
+ 	// // document.getElementById('parent').mouseup = function(){
+ 	// // 	console.log(this.getAttribute('data-id'));
+ 	// // }
+ 	// document.getElementById('child').onclick = function (ev){
+ 	
+ 	// 	var e =ev||window.event;
+ 	// 	console.log(this.getAttribute('data-id'));
+ 	// 	stopPropageation(e);
+
+ 	// };
+ 	// 
+ 	function stopPropageation(e){
+ 		if(e.stopPropageation){
+ 			e.stopPropageation();  //  阻止了事件冒泡
+ 		}else{
+ 			e.cancelBubble = true;  //  兼容ie
+ 		}
+ 	}
+ 	// //  事件如果减少dom操作，优化性能， 可以利用事件冒泡来实现事件委托；  父级元素有自己的操作， 则可以阻止掉事件冒泡
+ 	 var ul = document.getElementById('parentUl');
+ 	 ul.onclick = function(event){
+ 	 	var e = event||window.event,
+ 	 	    source = e.target || e.srcElement;
+ 	 	    if(source.nodeName.toLowerCase() == 'li'){
+ 	 	    	console.log(source.innerHTML);
+ 	 	    	stopPropageation(e);
+ 	 	    };
+ 	 	    function addEventment(){
+ 	 	    	var li = document.createElement('li');
+ 	 	    	li.innerHTML = '我是新孩子';
+ 	 	    	ul.appendChild(li);
+ 	 	    }
+ 	 	    addEventment();
+ 	 }
+
+
+ </script>
+</body>
+</html>
