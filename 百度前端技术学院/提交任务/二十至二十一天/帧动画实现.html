@@ -7,14 +7,182 @@
 			margin: 0;
 			padding: 0;
 		}
-		.
+		.nav{
+			width: 100%;
+			padding-left: 10px;
+			border: 1px solid #ccc;
+		}
+		.header{
+			width: 100%;
+			height: 500px;
+			/* border: 1px solid #ccc; */
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			/* margin: 0 auto; */
+			background-image: url(./section_1_00ad57e0.jpg)
+		}
+		.header .world{
+			box-sizing: border-box;
+			text-align: center;
+			width: 800px;
+			/* border: 1px solid #ccc; */
+		}
+		.world h1{
+			font-size: 50px;
+			text-align: center;
+			margin-top: 100px;
+			color: #fff;
+		}
+		.world h3{
+			display: inline-block;
+		    text-align: center;
+			width: 500px;
+			/* border: 1px solid #f40; */
+			margin-top: 10px;
+			color: #ccc;
+			font-size: 20px;
+		}
+		.world h4{
+			display: inline-block;
+			color: #fff;
+			width: 120px;
+			margin-top: 10px;
+			border-bottom: 3px solid #ccc;
+			/* display: inline-block; */
+		}
+		.world ul{
+			width: 100%;
+			height: 60px;
+			/* border: 1px solid #ccc; */
+			display: flex;
+			text-align: center;
+			margin-top: 30px;
+			justify-content: center;
+			/* float: left; */
+		}
+		ul li{
+			width: 120px;
+			height: 40px;
+			float: left;
+			list-style: none;
+			margin: 0 20px;
+			border: 1px solid #fff;
+			border-radius: 5px;
+			line-height: 40px;
+			color: #fff;
+		}
+		.animation{
+			width: 100%;
+			height: 400px;
+			border: 1px solid #eee;
+			display: flex;
+		}
+		.animation .text , .move{
+			flex: 1;
+			/* border: 1px solid #f40; */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.animation .text p{
+			margin-left: 20px;
+			font-size: 50px;
+		}
+		.animation .text p:nth-of-type(3){
+			width: 260px;
+			margin-top: 10px;
+			font-size: 20px;
+			color: #888;
+		}
+		.footer{
+			width: 100%;
+			height: 600px;
+			/* border: 1px solid #ccc; */
+			background-image: url(./section_2_8739e2cf.jpg);
+			position: relative;
+		}
+		.footer p{
+			margin-left: 30px;
+			position: absolute;
+			bottom: 200px;
+			font-size: 50px;
+		}
+		.footer p:nth-of-type(2){
+			bottom: 10px;
+			font-size: 18px;
+			width: 505px;
+			bottom: 100px;
+		}
+		.footer_nav{
+			width: 100%;
+			height: 150px;
+			background-color: #333;
+			padding-top: 10px;
+			box-sizing: border-box;
+		
+		}
+		.footer_nav .box{
+			/* margin-top: 10px; */
+			box-sizing: border-box;
+			margin: 0 auto;
+			width: 360px;
+			/* border: 1px solid #ccc; */
+			
+		}
+		.footer_nav .box p{
+			line-height: 30px;
+			color: #fff;
+			font-size: 12px;
+			text-align: center;
+		}
+	
 	</style>
 </head>
 <body>
-	<div class="nav"></div>
-	<div class="header"></div>
-	<div class="animation"></div>
-	<div class="footer"></div>
+	<div class="nav">
+		<img src="./logo.png" alt="">
+	</div>
+	<div class="header">
+		<div class="world">
+			<h1>面向大学生的前端技术学习平台</h1>
+			
+			<h3>由百度创办的免费的前端技术学习实践、交流、分享平台 一年之计在于春，已经开始报名，期待和你一起学习</h3>
+			<div>
+					<h4>查看春季班详情</h4>
+			</div>
+	
+			<ul>
+				<li>立即报名</li>
+				<li>查看任务</li>
+			</ul>
+		</div>
+	
+	</div>
+	<div class="animation">
+		<div class="text">
+			<p>纸上得来终觉浅</p>
+			<p>绝知此事要躬行</p>
+			<p>我们精心设计了许多编码任务  让你可以循环渐进、由浅入深地在实践中掌握技术</p>
+		</div>
+		<div class="move">
+
+		</div>
+	</div>
+	<div class="footer">
+		<p>三人行必有我师</p>
+		<p>各种经验告诉我们，总结、分享、交流对学习效率与效果的提升非常明显，我们致力于帮助大家建设一个更好的技术交流与分享氛围。</p>
+	</div>
+	<div class="footer_nav">
+		<div class="box">
+			<p>IFE微信公众号：baidu_ife  IFE微博：Baidu前端技术学院</p>
+			<p>友情链接    百度EFE  百度语音搜索  百度传课  百度校园  百度校园招聘
+				</p>
+				<p>学习资源     IFE 2015春季班   IFE 2015暑期营</p>
+				<p>©2016 Baidu 使用百度前必读 意见反馈 京ICP证030173号 </p>
+		</div>
+	</div>
 <script type="text/javascript">
 	
 </script>
