@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+    <style>
+        .palette {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .palette li {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>            
+    <ul class="palette">
+        <li style="background-color:crimson"></li>
+        <li style="background-color:bisque"></li>
+        <li style="background-color:blueviolet"></li>
+        <li style="background-color:coral"></li>
+        <li style="background-color:chartreuse"></li>
+        <li style="background-color:darkolivegreen"></li>
+        <li style="background-color:cyan"></li>
+        <li style="background-color:#194738"></li>        
+    </ul>
+
+    <p class="color-picker"></p>
+
+    <script>
+        // var list = document.querySelectorAll("li");
+        // for (var i = i = 0, len = list.length; i < len; i++) {
+        //     list[i].onclick = function(e) {
+        //         var t = e.target;
+        //         var c = t.style.backgroundColor;
+        //         var p = document.getElementsByClassName("color-picker")[0];
+        //         var a = p.style.backgroundColor;
+        //         console.log(a);
+        //         p.innerHTML = c;
+        //         p.style.color = c;
+        //         p.style.backgroundColor = c;
+        //         t.style.backgroundColor = a;
+
+        //     }
+        // }
+        
+        // 事件代理
+        
+       window.onload = function(){
+       	var oUl = document.getElementsByClassName("palette")[0];
+       	oUl.onclick = function(ev){
+       		var ev = ev || ev.window;
+       		var target = ev.target || ev.srcElement;
+       		if(target.nodeName.toLowerCase() == 'li'){
+       			var t = target.style.backgroundColor; // li标签上的元素
+       			var a = document.getElementsByClassName("color-picker")[0]; // p标签转换成dom对象
+       			var p = a.style.backgroundColor;// p标签的颜色
+       			a.innerHTML = t ; // 为p标签添加上li颜色名字
+       			a.style.backgroundColor = t; // 为p标签添加上 li的颜色
+       			target.style.backgroundColor = p;// 为li 添加上为改变前p的颜色
+       		}
+       	}
+
+       }
+    </script>
+</body>
+</html>

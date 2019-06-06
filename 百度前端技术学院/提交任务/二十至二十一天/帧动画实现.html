@@ -20,7 +20,9 @@
 			align-content: center;
 			justify-content: center;
 			/* margin: 0 auto; */
-			background-image: url(./section_1_00ad57e0.jpg)
+			background-image: url(./section_1_00ad57e0.jpg);
+			background-size: 100%;
+			background-repeat: no-repeat;
 		}
 		.header .world{
 			box-sizing: border-box;
@@ -49,6 +51,7 @@
 			width: 120px;
 			margin-top: 10px;
 			border-bottom: 3px solid #ccc;
+			cursor: pointer;
 			/* display: inline-block; */
 		}
 		.world ul{
@@ -71,10 +74,12 @@
 			border-radius: 5px;
 			line-height: 40px;
 			color: #fff;
+			cursor: pointer;
 		}
 		.animation{
+			position: relative;
 			width: 100%;
-			height: 400px;
+			height: 500px;
 			border: 1px solid #eee;
 			display: flex;
 		}
@@ -101,6 +106,8 @@
 			height: 600px;
 			/* border: 1px solid #ccc; */
 			background-image: url(./section_2_8739e2cf.jpg);
+			background-repeat: no-repeat;
+			background-size: 100%;
 			position: relative;
 		}
 		.footer p{
@@ -137,7 +144,15 @@
 			font-size: 12px;
 			text-align: center;
 		}
-	
+		
+		/*添加帧动画*/
+
+		.animation .move{
+			/*position: absolute;*/
+			background-image: url(./erik_ce204002.jpg);
+			background-repeat: no-repeat;
+			background-position: center 0;
+		}
 	</style>
 </head>
 <body>
@@ -184,7 +199,8 @@
 		</div>
 	</div>
 <script type="text/javascript">
-	
+	var move = document.getElementsByClassName("move")[0];
+
 </script>
 </body>
 </html>
