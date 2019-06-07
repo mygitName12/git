@@ -81,11 +81,11 @@
 			width: 100%;
 			height: 500px;
 			border: 1px solid #eee;
-			display: flex;
 		}
-		.animation .text , .move{
-			flex: 1;
-			/* border: 1px solid #f40; */
+		.animation .text {
+			float: left;
+			margin-top: 100px;
+			width: 50%;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -148,10 +148,15 @@
 		/*添加帧动画*/
 
 		.animation .move{
-			/*position: absolute;*/
+			height: 500px;
+			width: 50%;
+			z-index: 9999;
+			right:0;
+			position: absolute;
 			background-image: url(./erik_ce204002.jpg);
 			background-repeat: no-repeat;
-			background-position: center 0;
+			background-position:0 0;
+		
 		}
 	</style>
 </head>
@@ -181,7 +186,7 @@
 			<p>绝知此事要躬行</p>
 			<p>我们精心设计了许多编码任务  让你可以循环渐进、由浅入深地在实践中掌握技术</p>
 		</div>
-		<div class="move">
+		<div class="move" id="move">
 
 		</div>
 	</div>
@@ -199,7 +204,47 @@
 		</div>
 	</div>
 <script type="text/javascript">
-	var move = document.getElementsByClassName("move")[0];
+	var Move = document.getElementById("move");
+	var count  = 0;
+	
+	function moveTo(){
+	var flag = setInterval(nameto,60);
+		function nameto(){
+			count -= 480;
+			console.log(count)
+			Move.style.backgroundPosition ="0 "+count+"px";
+			console.log(Move.style.backgroundPosition)
+			if(count == -8160){
+				clearInterval(flag);
+			}
+		}	
+	}
+
+	function moveReplace(){
+		var flag= setInterval(namerepalce,60)
+		function namerepalce(){
+			count += 480;
+			console.log(count)
+			Move.style.backgroundPosition ="0 "+count+"px";
+			if(count == 0){
+				clearInterval(flag);
+			}
+		}
+			
+	
+	}
+	window.onload = function(){
+	setInterval(function(){
+		console.log(count)
+		if(count == 0)
+		{
+			 moveTo();
+		}else if(count == -8160){
+			 moveReplace();
+		}
+
+	},300)
+	}
 
 </script>
 </body>
